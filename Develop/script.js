@@ -1,4 +1,3 @@
-// Assignment code here
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
@@ -60,58 +59,26 @@ function generatePassword() {
         }
     }
 
-for (var i = 0; i < numLowercase; i++) {
-  generatedPassword += getRandomCharacter(lowercase);
+    for (var i = 0; i < numLowercase; i++) {
+        generatedPassword += getRandomCharacter(lowercase);
+    }
+
+    for (var i = 0; i < numUppercase; i++) {
+        generatedPassword += getRandomCharacter(uppercase);
+    }
+
+    for (var i = 0; i < numNumbers; i++) {
+        generatedPassword += getRandomCharacter(numbers);
+    }
+
+    for (var i = 0; i < numSpecialCharacters; i++) {
+        generatedPassword += getRandomCharacter(specialCharacters);
+    }
+
+    generatedPassword = shuffleString(generatedPassword);
+
+    return generatedPassword;
 }
-
-for (var i = 0; i < numUppercase; i++) {
-  generatedPassword += getRandomCharacter(uppercase);
-}
-
-for (var i = 0; i < numNumbers; i++) {
-  generatedPassword += getRandomCharacter(numbers);
-}
-
-for (var i = 0; i < numSpecialCharacters; i++) {
-  generatedPassword += getRandomCharacter(specialCharacters);
-}
-
-generatedPassword = shuffleString(generatedPassword);
-
-return generatedPassword;
-}
-
-var password = generatePassword();
-if (password) {
-    alert("Your password is: " + password);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
