@@ -5,6 +5,14 @@ var numbers = "0123456789";
 var specialCharacters = "!@#$%^&*()-_=+[]{}|;:,.<>?";
 var generatedPassword = "";
 
+function getRandomCharacter(string) {
+  return string.charAt(Math.floor(Math.random() * string.length));
+}
+
+function shuffleString(string) {
+  return string.split('').sort(function() { return 0.5 - Math.random() }).join('');
+}
+
 function generatePassword() {
 var length;
 var includeLowercase;                                                                             
@@ -53,17 +61,32 @@ includeSpecialCharacter = confirm("Include special characters?");
       alert("The total number of characters (" + totalCharacters + ") does not match the password length (" + passwordLength + "). Please try again.");
   }
 }
-function getRandomCharacter(string) {
-  return string.charAt(Math.floor(Math.random() * string.length));
+
+for (var i = 0; i < numLowercase; i++) {
+  generatedPassword += getRandomCharacter(lowercase);
 }
 
-function shuffleString(string) {
-  return string.split('').sort(function() { return 0.5 - Math.random() }).join('');
+for (var i = 0; i < numUppercase; i++) {
+  generatedPassword += getRandomCharacter(uppercase);
 }
 
+for (var i = 0; i < numNumbers; i++) {
+  generatedPassword += getRandomCharacter(numbers);
 }
 
+for (var i = 0; i < numSpecialCharacters; i++) {
+  generatedPassword += getRandomCharacter(specialCharacters);
+}
 
+generatedPassword = shuffleString(generatedPassword);
+
+return generatedPassword;
+}
+
+var password = generatePassword();
+if (password) {
+    alert("Your password is: " + password);
+}
 
 
 
