@@ -5,14 +5,21 @@ var numbers = "0123456789";
 var specialCharacters = "!@#$%^&*()-_=+[]{}|;:,.<>?";
 
 function generatePassword() {
-var length;                                                                 
-var includeLowercase;
+var length;
+var includeLowercase;                                                                             
 var includeUppercase;
 var includeNumber;
 var includeSpecialCharacter;
 var passwordLength = prompt("Enter password length between 8 and 128:");
 
+var includeLowercase = confirm("Include lowercase characters?");
+var numLowercase = 0; 
+if (includeLowercase) {
+    numLowercase = parseInt(prompt("How many lowercase characters do you want?"));
+
+  }
 }
+
 
 
 
