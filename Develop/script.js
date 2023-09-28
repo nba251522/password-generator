@@ -12,11 +12,41 @@ var includeNumber;
 var includeSpecialCharacter;
 var passwordLength = prompt("Enter password length between 8 and 128:");
 
-var includeLowercase = confirm("Include lowercase characters?");
+
+while (true) {
+includeLowercase = confirm("Include lowercase characters?");
 var numLowercase = 0; 
 if (includeLowercase) {
-    numLowercase = parseInt(prompt("Please enter the desired amount of lower case letters?"));
+    numLowercase = parseInt(prompt("Please enter the desired amount of lower case letters"));
   }
+
+includeUppercase = confirm("Include uppercase characters?");
+  var numUppercase = 0;
+  if (includeUppercase) {
+      numUppercase = parseInt(prompt("Please enter the desired amount of upper case letters"));
+  }
+  
+includeNumber = confirm("Include numbers?");
+  var numNumbers = 0;
+  if (includeNumber) {
+      numNumbers = parseInt(prompt("Please enter the desired amount of numbers"));
+  }
+ 
+includeSpecialCharacter = confirm("Include special characters?");
+  var numSpecialCharacters = 0;
+  if (includeSpecialCharacter) {
+      numSpecialCharacters = parseInt(prompt("Please enter the desired amount of special characters"));
+  }
+
+  var totalCharacters = numLowercase + numUppercase + numNumbers + numSpecialCharacters;
+
+  if (totalCharacters === passwordLength) {
+      break; 
+  } else {
+      alert("The total number of characters (" + totalCharacters + ") does not match the password length (" + passwordLength + "). Please try again.");
+  }
+}
+
 }
 
 
