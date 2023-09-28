@@ -3,6 +3,7 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numbers = "0123456789";
 var specialCharacters = "!@#$%^&*()-_=+[]{}|;:,.<>?";
+var generatedPassword = "";
 
 function generatePassword() {
 var length;
