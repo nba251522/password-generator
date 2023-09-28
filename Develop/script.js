@@ -15,8 +15,7 @@ var passwordLength = prompt("Enter password length between 8 and 128:");
 var includeLowercase = confirm("Include lowercase characters?");
 var numLowercase = 0; 
 if (includeLowercase) {
-    numLowercase = parseInt(prompt("How many lowercase characters do you want?"));
-
+    numLowercase = parseInt(prompt("Please enter the desired amount of lower case letters?"));
   }
 }
 
