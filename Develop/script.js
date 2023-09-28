@@ -10,8 +10,14 @@ var includeLowercase;
 var includeUppercase;
 var includeNumber;
 var includeSpecialCharacter;
-var passwordLength = prompt("Enter password length between 8 and 128:");
 
+while (true) {
+  var passwordLength = prompt("Enter password length between 8 and 128:");
+  if (passwordLength >= 8 && passwordLength <= 128) {
+      break;
+  }
+  alert("Password length must be between 8 and 128. Please enter a valid length.");
+}
 
 while (true) {
 includeLowercase = confirm("Include lowercase characters?");
