@@ -1,9 +1,45 @@
 // Assignment code here
-var length;
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
+var specialCharacters = "!@#$%^&*()-_=+[]{}|;:,.<>?";
+
+function generatePassword() {
+var length;                                                                 
 var includeLowercase;
 var includeUppercase;
 var includeNumber;
 var includeSpecialCharacter;
+var passwordLength = prompt("Enter password length between 8 and 128:");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
