@@ -15,7 +15,7 @@
 
 The Password Generator application was created to offer users a fast and easy way to generate a secure password. Having a security through a strong password is extremely important in a time where so much of a users information is stored online.
 
-![Password Generator Page Image](Develop/assets/images/Webpage%20snip.PNG)
+![Password Generator Page Image](Develop\images\Webpage snip.PNG)
 
 ## Table of Contents                                                                                                                        6      
 - [Installation](#installation)                                         
